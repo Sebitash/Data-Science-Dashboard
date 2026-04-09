@@ -1,5 +1,6 @@
 # Import any dependencies needed to execute sql queries
 from .sql_execution import QueryMixin
+from pathlib import Path
 
 # Define a class called QueryBase
 # Use inheritance to add methods
@@ -9,6 +10,9 @@ class QueryBase(QueryMixin):
     # Create a class attribute called `name`
     # set the attribute to an empty string
     name = ""
+
+    def __init__(self, db_path=None):
+        super().__init__(db_path)
 
     # Define a `names` method that receives
     # no passed arguments
