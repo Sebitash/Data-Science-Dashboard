@@ -11,9 +11,6 @@ class QueryBase(QueryMixin):
     # set the attribute to an empty string
     name = ""
 
-    def __init__(self, db_path=None):
-        super().__init__(db_path)
-
     # Define a `names` method that receives
     # no passed arguments
     def names(self):
